@@ -1,0 +1,319 @@
+/* CSS reset*/
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+.container {
+    position: relative;
+    margin-top: 100px;
+}
+
+.container img {
+    display: block;
+    width: 100%;
+}
+
+/*navigation bar*/
+nav {
+    position: relative;
+    z-index: 10;
+    left: 0px;
+    right: 50px;
+    top: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 11%;
+    height: 60px;
+    background-color: black;
+    width: auto;
+}
+
+nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -100px;
+}
+
+@media screen and (max-width: 768px) {
+nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+}
+
+nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, .8);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+}
+
+nav .links a {
+    font-size: 20px;
+}
+
+nav :checked~.links {
+    bottom: 0;
+}
+
+nav .icon-burger {
+    display: block;
+}
+
+nav :checked~.icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+}
+
+nav :checked~.icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+}
+
+nav :checked~.icon-burger .line:nth-child(2) {
+    opacity: 0;
+}
+}
+
+
+/* Background image */ 
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../img/rms.jpg');
+    background-size: cover;
+}
+
+h1 {
+    margin: 100px;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+
+
+/* For carosoul*/
+.carousel {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.slides {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+
+.slides-item {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 100px;
+    height: 600px;
+    justify-content: center;
+    margin: 0 1rem;
+    position: relative;
+    scroll-snap-align: start;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform .5s;
+    width: 100%;
+}
+
+.carousel__nav {
+    padding: 1.25rem .5rem;
+}
+
+.slider-nav {
+    align-items: center;
+    background-color: #ddd;
+    border-radius: 50%;
+    color: #000;
+    display: inline-flex;
+    height: 1.5rem;
+    justify-content: center;
+    padding: .5rem;
+    position: relative;
+    text-decoration: none;
+    width: 1.5rem;
+}
+
+.slider-nav:hover,
+.slider-nav:active {
+    background-color: #000;
+    color: #fff;
+}
+
+.slide-1 {
+    background-color: #fdc;
+}
+
+.slide-2 {
+    background-color: #bfd;
+}
+
+.slide-3 {
+    background-color: #cdf;
+}
+
+.slide-4 {
+    background-color: #dca;
+}
+
+.slide-5 {
+    background-color: #ffc;
+}
+
+.carousel__skip-link {
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+.carousel__skip-link:focus {
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    font-size: 30px;
+    height: 680px;
+    justify-content: center;
+    opacity: .8;
+    text-decoration: none;
+    width: 100%;
+    z-index: 1;
+}
+
+/* categories */
+.categ{
+    text-align: center;
+    margin: 180px;
+    font-size: larger;
+    font-weight: bolder;
+    border: 2px solid red;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+h2{
+    text-align: center;
+    font-size: 50px;
+}
+
+.aboutus{
+    font-size: 20px;
+    margin: 100px;
+    border-radius: 2px solid red;
+}
+
+.footer{
+    font-size: 25px;
+    margin: 50px 100px;
+    text-align: center;
+}
+
+/*form*/
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+  
+button:hover {
+    opacity: 0.8;
+}
+  
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+  
+.container {
+    padding: 16px;
+    margin: 0px 350px;
+}
+  
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+  
+  /* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+span.psw {
+    display: block;
+    float: none;
+}
+.cancelbtn {
+    width: 100%;
+    }
+}
